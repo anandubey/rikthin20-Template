@@ -65,7 +65,7 @@ var x = setInterval(function() {
 
 
 $(window).scroll(function() {
-    if ($(this).scrollTop() > 807){  
+    if ($(this).scrollTop() > 719){  
         $('nav').addClass("small_nav");
         
     }
