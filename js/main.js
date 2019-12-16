@@ -75,3 +75,52 @@ $(window).scroll(function() {
     }
 });
 
+
+// Events Section Modal
+
+var modal = document.getElementById('modal');
+var cultural_img = document.getElementById('culturalImg');
+var technical_img = document.getElementById('technicalImg');
+var gaming_img = document.getElementById('gamingImg');
+var sports_img = document.getElementById('sportsImg');
+var closeBtn = document.getElementById('closeBtn');
+
+cultural_img.addEventListener("click", function(){
+    
+    modal.style.display = 'flex';
+});
+technical_img.addEventListener("click", function(){
+    
+    modal.style.display = 'flex';
+});
+gaming_img.addEventListener("click", function(){
+    
+    modal.style.display = 'flex';
+});
+sports_img.addEventListener("click", function(){
+    
+    modal.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', closeModal);
+
+function closeModal(){
+    modal.style.display = 'none';
+}
+
+//Listens to outside clilck
+window.addEventListener('click', outsideClick);
+document.addEventListener ('keydown', outsideClick);
+
+function outsideClick(e){
+    if (e.target == modal){
+        modal.style.display = 'none';
+    }
+    if(e.key === "Escape"){
+        modal.style.display = 'none';
+    }
+}
+document.addEventListener ('keydown', outsideClick);
+
+
+// Gallery carousel

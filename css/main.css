@@ -74,7 +74,7 @@ nav .nav_links_ul li a {
 }
 
 nav .nav_links_ul li a:hover {
-  color: #fbec96;
+  color: black;
 }
 
 .sticky_nav {
@@ -95,6 +95,10 @@ nav .nav_links_ul li a:hover {
 
 .sticky_nav_on_scroll .nav_links_ul li a {
   color: #232D41;
+}
+
+.sticky_nav_on_scroll .nav_links_ul li a:hover {
+  color: #fbec96;
 }
 
 .small_nav {
@@ -126,7 +130,7 @@ main {
   top: 100vh;
   height: 100vh;
   width: 100%;
-  background-color: #EAF4F4;
+  background-image: radial-gradient(circle, #d1ba9a, #f4f4ea);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -142,12 +146,160 @@ main {
           align-items: center;
 }
 
+.main_events {
+  width: 70%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0 10px 0;
+}
+
+.main_events .event_container_bottom {
+  padding-top: 55px;
+}
+
+.main_events .event_container_top, .main_events .event_container_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main_events .event_container_top .cultural_overlay, .main_events .event_container_top .technical_overlay, .main_events .event_container_top .gaming_overlay, .main_events .event_container_top .sports_overlay, .main_events .event_container_bottom .cultural_overlay, .main_events .event_container_bottom .technical_overlay, .main_events .event_container_bottom .gaming_overlay, .main_events .event_container_bottom .sports_overlay {
+  height: 45vh;
+  cursor: pointer;
+}
+
+.main_events .event_container_top .cultural_overlay img, .main_events .event_container_top .technical_overlay img, .main_events .event_container_top .gaming_overlay img, .main_events .event_container_top .sports_overlay img, .main_events .event_container_bottom .cultural_overlay img, .main_events .event_container_bottom .technical_overlay img, .main_events .event_container_bottom .gaming_overlay img, .main_events .event_container_bottom .sports_overlay img {
+  height: 45vh;
+  border-radius: 45vh;
+}
+
+.main_events .event_container_top .cultural_overlay .cultural_text_div, .main_events .event_container_top .cultural_overlay .technical_text_div, .main_events .event_container_top .cultural_overlay .gaming_text_div, .main_events .event_container_top .cultural_overlay .sports_text_div, .main_events .event_container_top .technical_overlay .cultural_text_div, .main_events .event_container_top .technical_overlay .technical_text_div, .main_events .event_container_top .technical_overlay .gaming_text_div, .main_events .event_container_top .technical_overlay .sports_text_div, .main_events .event_container_top .gaming_overlay .cultural_text_div, .main_events .event_container_top .gaming_overlay .technical_text_div, .main_events .event_container_top .gaming_overlay .gaming_text_div, .main_events .event_container_top .gaming_overlay .sports_text_div, .main_events .event_container_top .sports_overlay .cultural_text_div, .main_events .event_container_top .sports_overlay .technical_text_div, .main_events .event_container_top .sports_overlay .gaming_text_div, .main_events .event_container_top .sports_overlay .sports_text_div, .main_events .event_container_bottom .cultural_overlay .cultural_text_div, .main_events .event_container_bottom .cultural_overlay .technical_text_div, .main_events .event_container_bottom .cultural_overlay .gaming_text_div, .main_events .event_container_bottom .cultural_overlay .sports_text_div, .main_events .event_container_bottom .technical_overlay .cultural_text_div, .main_events .event_container_bottom .technical_overlay .technical_text_div, .main_events .event_container_bottom .technical_overlay .gaming_text_div, .main_events .event_container_bottom .technical_overlay .sports_text_div, .main_events .event_container_bottom .gaming_overlay .cultural_text_div, .main_events .event_container_bottom .gaming_overlay .technical_text_div, .main_events .event_container_bottom .gaming_overlay .gaming_text_div, .main_events .event_container_bottom .gaming_overlay .sports_text_div, .main_events .event_container_bottom .sports_overlay .cultural_text_div, .main_events .event_container_bottom .sports_overlay .technical_text_div, .main_events .event_container_bottom .sports_overlay .gaming_text_div, .main_events .event_container_bottom .sports_overlay .sports_text_div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 80px;
+  width: 240px;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.main_events .event_container_top .cultural_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .cultural_text_div .technical_text, .main_events .event_container_top .cultural_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .cultural_text_div .sports_text, .main_events .event_container_top .cultural_overlay .technical_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .technical_text_div .technical_text, .main_events .event_container_top .cultural_overlay .technical_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .technical_text_div .sports_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .technical_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .gaming_text_div .sports_text, .main_events .event_container_top .cultural_overlay .sports_text_div .cultural_text, .main_events .event_container_top .cultural_overlay .sports_text_div .technical_text, .main_events .event_container_top .cultural_overlay .sports_text_div .gaming_text, .main_events .event_container_top .cultural_overlay .sports_text_div .sports_text, .main_events .event_container_top .technical_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .technical_overlay .cultural_text_div .technical_text, .main_events .event_container_top .technical_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .technical_overlay .cultural_text_div .sports_text, .main_events .event_container_top .technical_overlay .technical_text_div .cultural_text, .main_events .event_container_top .technical_overlay .technical_text_div .technical_text, .main_events .event_container_top .technical_overlay .technical_text_div .gaming_text, .main_events .event_container_top .technical_overlay .technical_text_div .sports_text, .main_events .event_container_top .technical_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .technical_overlay .gaming_text_div .technical_text, .main_events .event_container_top .technical_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .technical_overlay .gaming_text_div .sports_text, .main_events .event_container_top .technical_overlay .sports_text_div .cultural_text, .main_events .event_container_top .technical_overlay .sports_text_div .technical_text, .main_events .event_container_top .technical_overlay .sports_text_div .gaming_text, .main_events .event_container_top .technical_overlay .sports_text_div .sports_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .technical_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .cultural_text_div .sports_text, .main_events .event_container_top .gaming_overlay .technical_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .technical_text_div .technical_text, .main_events .event_container_top .gaming_overlay .technical_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .technical_text_div .sports_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .technical_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .gaming_text_div .sports_text, .main_events .event_container_top .gaming_overlay .sports_text_div .cultural_text, .main_events .event_container_top .gaming_overlay .sports_text_div .technical_text, .main_events .event_container_top .gaming_overlay .sports_text_div .gaming_text, .main_events .event_container_top .gaming_overlay .sports_text_div .sports_text, .main_events .event_container_top .sports_overlay .cultural_text_div .cultural_text, .main_events .event_container_top .sports_overlay .cultural_text_div .technical_text, .main_events .event_container_top .sports_overlay .cultural_text_div .gaming_text, .main_events .event_container_top .sports_overlay .cultural_text_div .sports_text, .main_events .event_container_top .sports_overlay .technical_text_div .cultural_text, .main_events .event_container_top .sports_overlay .technical_text_div .technical_text, .main_events .event_container_top .sports_overlay .technical_text_div .gaming_text, .main_events .event_container_top .sports_overlay .technical_text_div .sports_text, .main_events .event_container_top .sports_overlay .gaming_text_div .cultural_text, .main_events .event_container_top .sports_overlay .gaming_text_div .technical_text, .main_events .event_container_top .sports_overlay .gaming_text_div .gaming_text, .main_events .event_container_top .sports_overlay .gaming_text_div .sports_text, .main_events .event_container_top .sports_overlay .sports_text_div .cultural_text, .main_events .event_container_top .sports_overlay .sports_text_div .technical_text, .main_events .event_container_top .sports_overlay .sports_text_div .gaming_text, .main_events .event_container_top .sports_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .cultural_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .technical_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .gaming_overlay .sports_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .cultural_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .technical_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .gaming_text_div .sports_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .cultural_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .technical_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .gaming_text, .main_events .event_container_bottom .sports_overlay .sports_text_div .sports_text {
+  color: black;
+  width: 100%;
+  font-size: 2.5rem;
+  font-family: 'Lemonada', cursive;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main_events .event_container_top .cultural_overlay:hover .cultural_text_div, .main_events .event_container_top .technical_overlay:hover .technical_text_div, .main_events .event_container_top .gaming_overlay:hover .gaming_text_div, .main_events .event_container_top .sports_overlay:hover .sports_text_div, .main_events .event_container_bottom .cultural_overlay:hover .cultural_text_div, .main_events .event_container_bottom .technical_overlay:hover .technical_text_div, .main_events .event_container_bottom .gaming_overlay:hover .gaming_text_div, .main_events .event_container_bottom .sports_overlay:hover .sports_text_div {
+  opacity: 1;
+}
+
+.main_events .event_container_top img:hover, .main_events .event_container_bottom img:hover {
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
+  opacity: 0.7;
+}
+
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(185, 145, 90, 0.8);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal_content {
+  background-color: #f4f4ea;
+  margin: 20% auto;
+  padding: 20px;
+  width: 70%;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.19), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  -webkit-animation-name: modalopen;
+          animation-name: modalopen;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.close_btn {
+  background-color: white;
+  float: right;
+  margin-right: -35px;
+  margin-top: -35px;
+  width: 30px;
+  font-size: 28px;
+  text-align: center;
+  height: 30px;
+  border-radius: 30px;
+  color: #daca98;
+}
+
+.close_btn:hover, .close_btn:focus {
+  color: #685212;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #gallery {
   position: relative;
   top: 100vh;
   height: 100vh;
   width: 100%;
-  background-color: #1245FF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f4f4ea), to(#d1ba9a));
+  background-image: linear-gradient(to bottom, #f4f4ea, #d1ba9a);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
 }
 
 #contacts {
@@ -156,6 +308,112 @@ main {
   height: 100vh;
   width: 100%;
   background-color: #11FF74;
+}
+
+/* css for Developers section */
+#developers {
+  position: relative;
+  top: 100vh;
+  height: 441px;
+  max-height: 441px;
+  width: 100%;
+  z-index: 0;
+  background-color: #EAF4F4;
+  background-attachment: fixed;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  height: 200px;
+  width: 600px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.image {
+  height: 200px;
+  width: 200px;
+  opacity: .8;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.image:hover,
+.card:hover .image {
+  height: 200px;
+  opacity: 1;
+}
+
+.image > img {
+  width: 200px;
+}
+
+.text {
+  height: 200px;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 400px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.social_link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 180px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.social_link img {
+  height: 32px;
+  widht: 32px;
 }
 
 #logo {
@@ -296,186 +554,5 @@ rect {
   position: absolute;
   bottom: 0;
   right: 0;
-}
-
-/* css for Developers */
-#developers {
-  position: relative;
-  top: 100vh;
-  height: 441px;
-  max-height: 441px;
-  width: 100%;
-  z-index: 0;
-  background-color: #EAF4F4;
-  background-attachment: fixed;
-  background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card {
-  height: 200px;
-  width: 600px;
-  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-          box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.card:hover {
-  /*box-shadow: 0 5px 22px 0 rgba(0,0,0,.25);*/
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
-.image {
-  height: 200px;
-  width: 200px;
-  opacity: .8;
-  overflow: hidden;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
-.image:hover,
-.card:hover .image {
-  height: 200px;
-  opacity: 1;
-}
-
-.image > img {
-  width: 200px;
-}
-
-.text {
-  height: 200px;
-  font-family: Arial, Helvetica, sans-serif;
-  width: 400px;
-  padding: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.social_link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 180px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.social_link img {
-  height: 32px;
-  widht: 32px;
-}
-
-.main_events {
-  width: 70%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 10px 0 10px 0;
-}
-
-.main_events .event_container_bottom {
-  padding-top: 55px;
-}
-
-.main_events div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.main_events div .cultural_overlay, .main_events div .technical_overlay, .main_events div .gaming_overlay, .main_events div .sports_overlay {
-  height: 45vh;
-  cursor: pointer;
-}
-
-.main_events div .cultural_overlay img, .main_events div .technical_overlay img, .main_events div .gaming_overlay img, .main_events div .sports_overlay img {
-  height: 45vh;
-  border-radius: 45vh;
-}
-
-.main_events div .cultural_overlay .cultural_text_div, .main_events div .cultural_overlay .technical_text_div, .main_events div .cultural_overlay .gaming_text_div, .main_events div .cultural_overlay .sports_text_div, .main_events div .technical_overlay .cultural_text_div, .main_events div .technical_overlay .technical_text_div, .main_events div .technical_overlay .gaming_text_div, .main_events div .technical_overlay .sports_text_div, .main_events div .gaming_overlay .cultural_text_div, .main_events div .gaming_overlay .technical_text_div, .main_events div .gaming_overlay .gaming_text_div, .main_events div .gaming_overlay .sports_text_div, .main_events div .sports_overlay .cultural_text_div, .main_events div .sports_overlay .technical_text_div, .main_events div .sports_overlay .gaming_text_div, .main_events div .sports_overlay .sports_text_div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  height: 80px;
-  width: 240px;
-  opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-}
-
-.main_events div .cultural_overlay .cultural_text_div .cultural_text, .main_events div .cultural_overlay .cultural_text_div .technical_text, .main_events div .cultural_overlay .cultural_text_div .gaming_text, .main_events div .cultural_overlay .cultural_text_div .sports_text, .main_events div .cultural_overlay .technical_text_div .cultural_text, .main_events div .cultural_overlay .technical_text_div .technical_text, .main_events div .cultural_overlay .technical_text_div .gaming_text, .main_events div .cultural_overlay .technical_text_div .sports_text, .main_events div .cultural_overlay .gaming_text_div .cultural_text, .main_events div .cultural_overlay .gaming_text_div .technical_text, .main_events div .cultural_overlay .gaming_text_div .gaming_text, .main_events div .cultural_overlay .gaming_text_div .sports_text, .main_events div .cultural_overlay .sports_text_div .cultural_text, .main_events div .cultural_overlay .sports_text_div .technical_text, .main_events div .cultural_overlay .sports_text_div .gaming_text, .main_events div .cultural_overlay .sports_text_div .sports_text, .main_events div .technical_overlay .cultural_text_div .cultural_text, .main_events div .technical_overlay .cultural_text_div .technical_text, .main_events div .technical_overlay .cultural_text_div .gaming_text, .main_events div .technical_overlay .cultural_text_div .sports_text, .main_events div .technical_overlay .technical_text_div .cultural_text, .main_events div .technical_overlay .technical_text_div .technical_text, .main_events div .technical_overlay .technical_text_div .gaming_text, .main_events div .technical_overlay .technical_text_div .sports_text, .main_events div .technical_overlay .gaming_text_div .cultural_text, .main_events div .technical_overlay .gaming_text_div .technical_text, .main_events div .technical_overlay .gaming_text_div .gaming_text, .main_events div .technical_overlay .gaming_text_div .sports_text, .main_events div .technical_overlay .sports_text_div .cultural_text, .main_events div .technical_overlay .sports_text_div .technical_text, .main_events div .technical_overlay .sports_text_div .gaming_text, .main_events div .technical_overlay .sports_text_div .sports_text, .main_events div .gaming_overlay .cultural_text_div .cultural_text, .main_events div .gaming_overlay .cultural_text_div .technical_text, .main_events div .gaming_overlay .cultural_text_div .gaming_text, .main_events div .gaming_overlay .cultural_text_div .sports_text, .main_events div .gaming_overlay .technical_text_div .cultural_text, .main_events div .gaming_overlay .technical_text_div .technical_text, .main_events div .gaming_overlay .technical_text_div .gaming_text, .main_events div .gaming_overlay .technical_text_div .sports_text, .main_events div .gaming_overlay .gaming_text_div .cultural_text, .main_events div .gaming_overlay .gaming_text_div .technical_text, .main_events div .gaming_overlay .gaming_text_div .gaming_text, .main_events div .gaming_overlay .gaming_text_div .sports_text, .main_events div .gaming_overlay .sports_text_div .cultural_text, .main_events div .gaming_overlay .sports_text_div .technical_text, .main_events div .gaming_overlay .sports_text_div .gaming_text, .main_events div .gaming_overlay .sports_text_div .sports_text, .main_events div .sports_overlay .cultural_text_div .cultural_text, .main_events div .sports_overlay .cultural_text_div .technical_text, .main_events div .sports_overlay .cultural_text_div .gaming_text, .main_events div .sports_overlay .cultural_text_div .sports_text, .main_events div .sports_overlay .technical_text_div .cultural_text, .main_events div .sports_overlay .technical_text_div .technical_text, .main_events div .sports_overlay .technical_text_div .gaming_text, .main_events div .sports_overlay .technical_text_div .sports_text, .main_events div .sports_overlay .gaming_text_div .cultural_text, .main_events div .sports_overlay .gaming_text_div .technical_text, .main_events div .sports_overlay .gaming_text_div .gaming_text, .main_events div .sports_overlay .gaming_text_div .sports_text, .main_events div .sports_overlay .sports_text_div .cultural_text, .main_events div .sports_overlay .sports_text_div .technical_text, .main_events div .sports_overlay .sports_text_div .gaming_text, .main_events div .sports_overlay .sports_text_div .sports_text {
-  color: black;
-  width: 100%;
-  font-size: 2.5rem;
-  font-family: 'Lemonada', cursive;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.main_events div .cultural_overlay:hover .cultural_text_div, .main_events div .technical_overlay:hover .technical_text_div, .main_events div .gaming_overlay:hover .gaming_text_div, .main_events div .sports_overlay:hover .sports_text_div {
-  opacity: 1;
-}
-
-.main_events div img:hover {
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.19), 0 1px 1px rgba(0, 0, 0, 0.23);
 }
 /*# sourceMappingURL=main.css.map */
