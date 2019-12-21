@@ -122,5 +122,4 @@ function outsideClick(e){
 }
 document.addEventListener ('keydown', outsideClick);
 
-
 // Gallery carousel

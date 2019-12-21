@@ -293,13 +293,108 @@ main {
   position: relative;
   top: 100vh;
   height: 100vh;
+  padding: 5px;
   width: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f4f4ea), to(#d1ba9a));
-  background-image: linear-gradient(to bottom, #f4f4ea, #d1ba9a);
+  background-image: radial-gradient(circle, #d1ba9a, #f4f4ea);
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+  row-gap: 5px;
+}
+
+.picture_holder {
+  width: 100%;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 280px 280px 280px 280px 280px;
+      grid-template-columns: 280px 280px 280px 280px 280px;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+}
+
+.picture_holder .image_holder {
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-block;
+  margin-right: 5px;
+  position: relative;
+}
+
+.picture_holder .image_holder .slide_img {
+  height: 186px;
+  position: absolute;
+  left: 0;
+  -webkit-animation-name: crossfade;
+          animation-name: crossfade;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 11s;
+          animation-duration: 11s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(1) {
+  -webkit-animation-delay: 9s;
+          animation-delay: 9s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(2) {
+  -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(3) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.picture_holder .image_holder .slide_img:nth-of-type(4) {
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+}
+
+@-webkit-keyframes crossfade {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes crossfade {
+  0% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 #contacts {
@@ -413,7 +508,7 @@ main {
 
 .social_link img {
   height: 32px;
-  widht: 32px;
+  width: 32px;
 }
 
 #logo {

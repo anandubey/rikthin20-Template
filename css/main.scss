@@ -266,12 +266,69 @@ main{
     position: relative;
     top: 100vh;
     height: 100vh;
+    padding: 5px;
     width: 100%;
-    background-image: linear-gradient(to bottom, color(prime_bg), rgb(209, 186, 154));
+    background-image: radial-gradient(circle, rgb(209, 186, 154),color(prime_bg));
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
 }
-
+.picture_holder{
+    width: 100%;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 280px 280px 280px 280px 280px;
+    column-gap: 5px;
+    .image_holder{
+        height: 100%;
+        width: max-content;
+        display: inline-block;
+        margin-right: 5px;
+        position: relative;
+        .slide_img{
+            height: 186px;
+            position: absolute;
+            left: 0;
+            animation-name: crossfade;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 11s;
+        }
+        .slide_img:nth-of-type(1) {
+            animation-delay: 9s;
+          }
+          .slide_img:nth-of-type(2) {
+            animation-delay: 6s;
+          }
+          .slide_img:nth-of-type(3) {
+            animation-delay: 3s;
+          }
+          .slide_img:nth-of-type(4) {
+            animation-delay: 0;
+          }
+          
+          
+          }
+}
+@keyframes crossfade {
+    0% {
+      opacity:1;
+    }
+    17% {
+      opacity:1;
+    }
+    25% {
+      opacity:0;
+    }
+    92% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+    
 
 
 
@@ -369,7 +426,7 @@ opacity: 1;
     justify-content: space-between;
     img{
         height:32px;
-        widht:32px;
+        width:32px;
     }
 }
 
