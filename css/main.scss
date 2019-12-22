@@ -17,6 +17,7 @@ $custom_color: (
 html {
     overflow: scroll;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     width: 0px;  /* Remove scrollbar space */
@@ -131,8 +132,26 @@ main{
     overflow: hidden;
     position: fixed;
     top: 0;
-    
     z-index: 1;
+
+    .social_media{
+        position: absolute;
+        bottom: 10px;
+        left:10px;
+        width: 140px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .facebook, .insta{
+            width: 35px;
+            filter: invert(100%);
+        }
+        .youtube{
+            width: 40px;
+            filter: grayscale(100%);
+        }
+    }
 }
 
 

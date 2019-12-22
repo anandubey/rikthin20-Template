@@ -1,45 +1,81 @@
+var navBar = document.getElementById('navbar');
+eka_logo = document.getElementById('logo');
+var landing = document.getElementById('landing');
 
-$(function () {
-    $(document).scroll(function () {
-        var $nav = $(".sticky_nav");
-        $nav.toggleClass('sticky_nav_on_scroll', $(this).scrollTop() > 0);
-        });
-    }
-);
-
-
-$(document).ready(function(){
-    $(".nav_link_anchor").on('click', function(event) {
-      if (this.hash !== "") {
-        event.preventDefault();
-        var hash = this.hash;
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 800, function(){
-     
-          // Add hash (#) to URL when done scrolling (default click behavior)
-          window.location.hash = hash;
-        });
-      } // End if
-    });
-  });
-
-
-window.addEventListener('scroll', function(){
-    eka_logo = document.getElementById('logo');
-    eka_logo.style.opacity = 1 - + window.pageYOffset/550;
+window.onscroll = function changeClass(){
+    var scrollPosY = window.pageYOffset | document.body.scrollTop;
     
-});
+    if(scrollPosY > 0) {
+        navBar.classList.add("sticky_nav_on_scroll");
+    } 
+    else{
+       navBar.classList.remove("sticky_nav_on_scroll");
+    }
+
+    if (scrollPosY > 719){  
+        navBar.classList.add("small_nav");
+        
+    }
+    else{
+        navBar.classList.remove("small_nav");
+        
+    }
+
+    landing.style.filter = "blur(" + (scrollPosY/100) + "px)";
+
+    
+    eka_logo.style.opacity = 1 - + window.pageYOffset/550;
+}
 
 
-/*
-$(window).scroll(function(){
-    var scroll = $(window).scrollTop();
-    $('#landing').css({
-        filter: "blur(" + (scroll/100) + "px)"
-    })
-})
-*/
+
+function currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+        return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
+}
+
+
+function elmYPosition(eID) {
+    var elm = document.getElementById(eID);
+    var y = elm.offsetTop;
+    var node = elm;
+    while (node.offsetParent && node.offsetParent != document.body) {
+        node = node.offsetParent;
+        y += node.offsetTop;
+    } return y;
+}
+
+
+function smoothScroll(eID) {
+    var startY = currentYPosition();
+    var stopY = elmYPosition(eID);
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 100) {
+        scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if (speed >= 20) speed = 20;
+    var step = Math.round(distance / 25);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+        for ( var i=startY; i<stopY; i+=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+        } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+}
+
 
 var countDownDate = new Date("feb 5, 2020 09:00:00").getTime();
 var x = setInterval(function() {
@@ -64,16 +100,7 @@ var x = setInterval(function() {
 
 
 
-$(window).scroll(function() {
-    if ($(this).scrollTop() > 719){  
-        $('nav').addClass("small_nav");
-        
-    }
-    else{
-        $('nav').removeClass("small_nav");
-        
-    }
-});
+
 
 
 // Events Section Modal
@@ -125,6 +152,9 @@ document.addEventListener ('keydown', outsideClick);
 // Gallery carousel
 
 // Contacts
+
+
+// Developers
 var myID = document.getElementById("developers");
 
 var myScrollFunc = function() {
@@ -137,3 +167,5 @@ var myScrollFunc = function() {
 };
 
 window.addEventListener("scroll", myScrollFunc);
+
+
