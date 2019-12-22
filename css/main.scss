@@ -46,7 +46,7 @@ nav{
     width: 100%;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     left: 0;
     height: 14.78vh;
     background-color: transparent; 
@@ -110,17 +110,19 @@ nav{
 }
 
 main{
+    position: relative;
     width: 100%;
-    min-height: 2000px;
+    min-height: 3000px;
     height: 100%;
 }
 
 
 
-
+// CSS for Landing Section
 #landing{
-    width: 100%;
+    width: 100%;  
     height: 100vh;
+    min-height: 783px;
     background: url("../img/concert.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -130,311 +132,8 @@ main{
     position: fixed;
     top: 0;
     
-    z-index: 0;
-}
-
-
-
-
-// css for Events Section
-
-#events{
-    position: relative;
-    top: 100vh;
-    height: 100vh;
-    width: 100%;
-    background-image: radial-gradient(circle, rgb(209, 186, 154),color(prime_bg));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.main_events{
-    width: 70%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 0 10px 0;
-    .event_container_bottom{
-        padding-top: 55px;
-    }
-
-    .event_container_top, .event_container_bottom{
-        display: flex;
-        justify-content: space-between;
-        .cultural_overlay, .technical_overlay, .gaming_overlay,.sports_overlay{
-            height: 45vh;
-            cursor: pointer;
-            img{
-                height: 45vh;
-                border-radius: 45vh;
-            }
-            .cultural_text_div, .technical_text_div, .gaming_text_div, .sports_text_div{
-                position: absolute;
-                top: 50%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                height: 80px;
-                width: 240px;
-                opacity: 0;
-                transition: .5s ease;
-                .cultural_text, .technical_text, .gaming_text, .sports_text{
-                    color: black;
-                    width: 100%;
-                    font-size: 2.5rem;
-                    font-family: 'Lemonada', cursive;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                    text-align: center;
-                }
-            }
-        }
-        .cultural_overlay:hover .cultural_text_div, .technical_overlay:hover  .technical_text_div, .gaming_overlay:hover .gaming_text_div,.sports_overlay:hover  .sports_text_div{
-            opacity: 1;
-        }
-        img:hover{
-            box-shadow: 0 1px 1px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
-            opacity: 0.7;
-        }
-    }
-
-}
-#modal{
-    display: none;
-    position:fixed;
     z-index: 1;
-    left: 0;
-    top:0;
-    height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: rgba(185, 145, 90, 0.8);
-    justify-content: center;
-    align-items: center;
-    
 }
-.modal_content{
-    background-color: color(prime_bg);
-    margin: 20% auto;
-    padding: 20px;
-    width: 70%;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.19), 0 7px 20px 0 rgba(0,0,0,0.17);
-    animation-name: modalopen;
-    animation-duration: 1s;
-
-}
-.close_btn{
-    background-color: white;
-    float: right;
-    margin-right: -35px;
-    margin-top: -35px;
-    width: 30px;
-    font-size: 28px;
-    text-align: center;
-    height: 30px;
-    border-radius: 30px;
-    color: rgb(218, 202, 152);
-}
-
-.close_btn:hover, .close_btn:focus{
-    color: rgb(104, 82, 18);
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@keyframes modalopen{
-    from{opacity: 0;}
-    to{opacity: 1;}
-}
-
-
-
-
-
-
-// css for Gallery Section
-
-#gallery{
-    position: relative;
-    top: 100vh;
-    height: 100vh;
-    padding: 5px;
-    width: 100%;
-    background-image: radial-gradient(circle, rgb(209, 186, 154),color(prime_bg));
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    row-gap: 5px;
-}
-.picture_holder{
-    width: 100%;
-    list-style: none;
-    display: grid;
-    justify-content: center;
-    grid-template-columns: 280px 280px 280px 280px 280px;
-    column-gap: 5px;
-    .image_holder{
-        height: 100%;
-        width: max-content;
-        display: inline-block;
-        margin-right: 5px;
-        position: relative;
-        .slide_img{
-            height: 186px;
-            position: absolute;
-            left: 0;
-            animation-name: crossfade;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-duration: 11s;
-        }
-        .slide_img:nth-of-type(1) {
-            animation-delay: 9s;
-          }
-          .slide_img:nth-of-type(2) {
-            animation-delay: 6s;
-          }
-          .slide_img:nth-of-type(3) {
-            animation-delay: 3s;
-          }
-          .slide_img:nth-of-type(4) {
-            animation-delay: 0;
-          }
-          
-          
-          }
-}
-@keyframes crossfade {
-    0% {
-      opacity:1;
-    }
-    17% {
-      opacity:1;
-    }
-    25% {
-      opacity:0;
-    }
-    92% {
-      opacity:0;
-    }
-    100% {
-      opacity:1;
-    }
-}
-    
-
-
-
-
-
-
-
-
-
-
-
-
-#contacts{
-    position: relative;
-    top: 100vh;
-    height: 100vh;
-    width: 100%;
-    
-    background-color: #11FF74;
-}
-
-
-
-
-
-
-
-
-  
-/* css for Developers section */
-#developers{
-    position: relative;
-    top: 100vh;
-    height: 441px;
-    max-height: 441px;
-    width: 100%;
-    z-index:0;
-    background-color: #EAF4F4;
-    background-attachment: fixed;
-    background-position: center;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.card {
-    height: 200px;
-    width: 600px;
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
-    transition: all .2s ease-in-out;
-    display:/*box-shadow: 0 5px 22px 0 rgba(0,0,0,.25);*/ flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.card:hover {
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
-
-.image {
-height: 200px;
-width: 200px;
-
-opacity: .8;
-overflow: hidden;
-transition: all .2s ease-in-out;
-}
-
-.image:hover,
-.card:hover .image {
-height: 200px;
-opacity: 1;
-}
-.image > img{
-    width: 200px;
-}
-
-.text {
-    height: 200px;
-    font-family: Arial, Helvetica, sans-serif;
-    width:400px;
-    padding:10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
-.social_link{
-    display: flex;
-    width: 180px;
-    flex-direction: row;
-    justify-content: space-between;
-    img{
-        height:32px;
-        width:32px;
-    }
-}
-
-
-
-
-
-
 
 
 #logo{
@@ -535,6 +234,337 @@ rect{
     bottom: 0;
     right: 0;
 }
+
+
+
+
+
+// css for Events Section
+
+#events{
+    position: relative;
+    top: 100vh;
+    min-height: 783px;
+    height: 100vh;
+    width: 100%;
+    background-image: radial-gradient(circle, rgb(209, 186, 154),color(prime_bg));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.main_events{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    .event_container_bottom{
+        padding-top: 55px;
+    }
+
+    .event_container_top, .event_container_bottom{
+        display: flex;
+        justify-content: space-between;
+        .cultural_overlay, .technical_overlay, .gaming_overlay,.sports_overlay{
+            height: 45vh;
+            min-height: 352px;
+            cursor: pointer;
+            img{
+                height: 45vh;
+                min-height: 352px;
+                border-radius: 45vh;
+            }
+            .cultural_text_div, .technical_text_div, .gaming_text_div, .sports_text_div{
+                position: absolute;
+                top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                height: 80px;
+                width: 240px;
+                opacity: 0;
+                transition: .5s ease;
+                .cultural_text, .technical_text, .gaming_text, .sports_text{
+                    color: black;
+                    width: 100%;
+                    font-size: 2.5rem;
+                    font-family: 'Lemonada', cursive;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    -ms-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+        }
+        .cultural_overlay:hover .cultural_text_div, .technical_overlay:hover  .technical_text_div, .gaming_overlay:hover .gaming_text_div,.sports_overlay:hover  .sports_text_div{
+            opacity: 1;
+        }
+        img:hover{
+            box-shadow: 0 1px 1px rgba(0,0,0,0.19), 0 1px 1px rgba(0,0,0,0.23);
+            opacity: 0.7;
+        }
+    }
+
+}
+#modal{
+    display: none;
+    position:fixed;
+    z-index: 1;
+    left: 0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(185, 145, 90, 0.8);
+    justify-content: center;
+    align-items: center;
+    
+}
+.modal_content{
+    background-color: color(prime_bg);
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.19), 0 7px 20px 0 rgba(0,0,0,0.17);
+    animation-name: modalopen;
+    animation-duration: 1s;
+
+}
+.close_btn{
+    background-color: white;
+    float: right;
+    margin-right: -35px;
+    margin-top: -35px;
+    width: 30px;
+    font-size: 28px;
+    text-align: center;
+    height: 30px;
+    border-radius: 30px;
+    color: rgb(218, 202, 152);
+}
+
+.close_btn:hover, .close_btn:focus{
+    color: rgb(104, 82, 18);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes modalopen{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+
+
+
+// css for Gallery Section
+
+#gallery{
+    position: relative;
+    top: 100vh;
+    min-height: 783px;
+    height: 100vh;
+    padding: 5px;
+    width: 100%;
+    background-image: radial-gradient(circle, rgb(209, 186, 154),color(prime_bg));
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    row-gap: 5px;
+    z-index: 2;
+}
+.picture_holder{
+    width: 100%;
+    list-style: none;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 280px 280px 280px 280px 280px;
+    column-gap: 5px;
+    .image_holder{
+        height: 100%;
+        width: max-content;
+        display: inline-block;
+        margin-right: 5px;
+        position: relative;
+        .slide_img{
+            height: 186px;
+            position: absolute;
+            left: 0;
+            animation-name: crossfade;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-duration: 11s;
+        }
+        .slide_img:nth-of-type(1) {
+            animation-delay: 9s;
+          }
+          .slide_img:nth-of-type(2) {
+            animation-delay: 6s;
+          }
+          .slide_img:nth-of-type(3) {
+            animation-delay: 3s;
+          }
+          .slide_img:nth-of-type(4) {
+            animation-delay: 0;
+          }
+          
+          
+          }
+}
+@keyframes crossfade {
+    0% {
+      opacity:1;
+    }
+    17% {
+      opacity:1;
+    }
+    25% {
+      opacity:0;
+    }
+    92% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+    
+
+
+
+
+
+
+
+
+
+
+
+
+#contacts{
+    position: relative;
+    top: 100vh;
+    min-height: 783px;
+    height: 100vh;
+    width: 100%;
+    z-index: 2;
+    margin-bottom: 441px;
+    background-image: radial-gradient(circle, rgb(209, 186, 154),color(prime_bg));
+    -webkit-box-shadow: #000 0 7px 35px 0;
+	-moz-box-shadow: #000 0 7px 35px 0;
+    box-shadow: 3px 2px 2px 0px rgba(51,51,51,0.5);
+    
+    .contact_wrapper{
+        width: 70%;
+        height: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 10px;
+        row-gap: 10px;
+
+        .contact_holder{
+            width: auto;
+            height: auto;
+            background-color: brown;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+  
+/* css for Developers section */
+#developers{
+    position: fixed;
+    bottom: 0;
+    height: 441px;
+    max-height: 441px;
+    width: 100%;
+    background-color: #EAF4F4;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    z-index: 0;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card {
+    height: 200px;
+    width: 600px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+    transition: all .2s ease-in-out;
+    display:/*box-shadow: 0 5px 22px 0 rgba(0,0,0,.25);*/ flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.image {
+height: 200px;
+width: 200px;
+
+opacity: .8;
+overflow: hidden;
+transition: all .2s ease-in-out;
+}
+
+.image:hover,
+.card:hover .image {
+height: 200px;
+opacity: 1;
+}
+.image > img{
+    width: 200px;
+}
+
+.text {
+    height: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+    width:400px;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.social_link{
+    display: flex;
+    width: 180px;
+    flex-direction: row;
+    justify-content: space-between;
+    img{
+        height:32px;
+        width:32px;
+    }
+}
+
+
+
+
+
 
 
 

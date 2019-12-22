@@ -123,3 +123,17 @@ function outsideClick(e){
 document.addEventListener ('keydown', outsideClick);
 
 // Gallery carousel
+
+// Contacts
+var myID = document.getElementById("developers");
+
+var myScrollFunc = function() {
+  var y = window.scrollY;
+  if (y >= 2200) {
+    myID.style.zIndex= 1;
+  } else {
+    myID.style.zIndex = 0;
+  }
+};
+
+window.addEventListener("scroll", myScrollFunc);
