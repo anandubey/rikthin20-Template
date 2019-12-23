@@ -622,10 +622,8 @@ rect {
   background-color: #EAF4F4;
   background-attachment: fixed;
   background-position: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 0;
+  display: none;
+  z-index: 1;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;

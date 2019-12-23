@@ -21,7 +21,7 @@ window.onscroll = function changeClass(){
         
     }
 
-    landing.style.filter = "blur(" + (scrollPosY/100) + "px)";
+    landing.style.filter = "blur(" + (scrollPosY/120) + "px)";
 
     
     eka_logo.style.opacity = 1 - + window.pageYOffset/550;
@@ -155,14 +155,14 @@ document.addEventListener ('keydown', outsideClick);
 
 
 // Developers
-var myID = document.getElementById("developers");
+var dev = document.getElementById("developers");
 
 var myScrollFunc = function() {
   var y = window.scrollY;
   if (y >= 2200) {
-    myID.style.zIndex= 1;
+    dev.style.display = 'flex';
   } else {
-    myID.style.zIndex = 0;
+    dev.style.display = 'none';
   }
 };
 

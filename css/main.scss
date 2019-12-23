@@ -518,8 +518,8 @@ rect{
     background-color: #EAF4F4;
     background-attachment: fixed;
     background-position: center;
-    display: flex;
-    z-index: 0;
+    display: none;
+    z-index: 1;
     justify-content: space-around;
     align-items: center;
 }
